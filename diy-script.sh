@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/luci2/bin/config_generate
 
 # 更改默认 Shell 为 zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
@@ -14,7 +14,6 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/luci2/bin/config_gener
 sed -i 's/auto//' package/base-files/files/bin/config_generate
 
 # 移除要替换的包
-rm -rf staging_dir build_dir
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
